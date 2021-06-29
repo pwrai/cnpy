@@ -1,11 +1,10 @@
-CMAKE_MINIMUM_REQUIRED(VERSION 3.0 FATAL_ERROR)
-if(COMMAND cmake_policy)
-	cmake_policy(SET CMP0003 NEW)
-endif(COMMAND cmake_policy)
-
+cmake_minimum_required(VERSION 2.8.2)
 project(CNPY)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_COMPILER "clang++")
+set(CMAKE_C_COMPILER "clang")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -fPIC")
 
 option(ENABLE_STATIC "Build static (.a) library" ON)
 
