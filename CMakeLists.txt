@@ -17,9 +17,7 @@ set_target_properties(cnpy-static PROPERTIES OUTPUT_NAME "cnpy")
 install(TARGETS "cnpy-static" ARCHIVE DESTINATION lib)
 install(FILES "cnpy.h" DESTINATION include)
 
-target_link_libraries(cnpy-static
-        PUBLIC
-        ZLIB::ZLIB);
+target_link_libraries(cnpy-static ZLIB::ZLIB)
 
 add_executable(example1 example1.cpp)
 target_link_libraries(example1 cnpy)
